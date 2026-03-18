@@ -57,9 +57,11 @@ juce_add_plugin(GWAudioSyncGUI
   PLUGIN_MANUFACTURER_CODE Gwrt
   PLUGIN_CODE Gwas
   FORMATS VST3
-  PRODUCT_NAME "GW Audio Sync GUI"
+  PRODUCT_NAME "Audio & Video Loader"
   VST3_CATEGORIES Fx
 )
+
+juce_generate_juce_header(GWAudioSyncGUI)
 
 target_sources(GWAudioSyncGUI
   PRIVATE
@@ -82,6 +84,7 @@ target_link_libraries(GWAudioSyncGUI
     juce::juce_audio_utils
     juce::juce_dsp
     juce::juce_gui_extra
+    juce::juce_video
   PUBLIC
     juce::juce_recommended_config_flags
     juce::juce_recommended_lto_flags
